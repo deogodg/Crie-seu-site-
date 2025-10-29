@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha Halloween</title>
-    <link rel="stylesheet" href="paraagora.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>🎃 Jogo da Velha Halloween 👻</h1>
+     <h1>🎃 Jogo da Velha Halloween 👻</h1>
+    <div id="scoreboard">
+        <p>Placar:</p>
+        <p>Fantasma 👻: <span id="ghost-score">0</span> | Abóbora 🎃: <span id="pumpkin-score">0</span></p>
+    </div>
     <div id="board">
         <div class="cell" data-index="0"></div>
         <div class="cell" data-index="1"></div>
@@ -19,8 +23,21 @@
         <div class="cell" data-index="7"></div>
         <div class="cell" data-index="8"></div>
     </div>
+    <button id="toggle-mode">🤖 Alternar Modo (PvP)</button>
     <button id="reset">🔄 Reiniciar Jogo</button>
+    <button id="reset-score">🗑️ Resetar Placar</button>
+    <label id="jumpscare-toggle">
+        <input type="checkbox" id="enable-jumpscare" checked> Ativar Jumpscares
+    </label>
     <p id="message">Vez do Fantasma 👻</p>
-    <script src="tomaseucu.js"></script>
+    
+    <!-- Jumpscare overlay -->
+    <div id="jumpscare">
+        <img src="images.jpeg" alt="Fantasma assustador"> <!-- Substitua por uma imagem real, ex.: https://example.com/ghost-jump.png -->
+        <audio id="jumpscare-sound" preload="auto">
+            <source src="grito.mp3" type="audio/mp3"> <!-- Placeholder; substitua por som de grito, ex.: https://freesound.org/data/previews/316/316847_5123451-lq.mp3 -->
+        </audio>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
