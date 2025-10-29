@@ -47,7 +47,7 @@ function handleCellClick(event) {
             ghostScore++;
             document.getElementById('ghost-score').textContent = ghostScore;
             // Jumpscare no PvP quando o placar do Fantasma chegar a 5
-            if (enableJumpscare.checked && !isVsAI && ghostScore === 5) {
+            if (enableJumpscare.checked && !isVsAI && ghostScore === 1) {
                 triggerJumpscare();
             }
         } else {
@@ -172,4 +172,3 @@ cells.forEach(cell => cell.addEventListener('click', handleCellClick));
 resetButton.addEventListener('click', resetGame);
 resetScoreButton.addEventListener('click', resetScoreboard);
 toggleModeButton.addEventListener('click', toggleMode);
-
